@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html ng-app="myCalculator">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="calculator.css">
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="calculator.js"></script>
+		<title>AngularJS Fuel Consumption App</title>
+	</head>
+	<body>
+
+		<div id="myCalculator" ng-controller="CalculatorController">
+
+			<div id="header">
+				<h1>AngularJS Car Fuel Consumption Comparison App</h1>
+			</div>
+
+			<main>
+				<section class="mazda">
+					<div>
+						<h2>Mazda 2</h2>
+						<p>4.9 liters per 100km</p>
+						<p>{{ mazda_cost }}</p>
+					</div>
+				</section>
+				<section class="toyota">
+					<div>
+						<h2>Toyota Hilux</h2>
+						<p>9.3 liters per 100km</p>
+						<p>{{ toyota_cost }}</p>
+					</div>
+				</section>
+				<section class="lambo">
+					<div>
+						<h2>Lambo Huracan</h2>
+						<p>12.5 liters per 100km</p>
+						<p>{{ lambo_cost }}</p>
+					</div>
+				</section>
+				<section class="f1">
+					<div>
+						<h2>Mercedes F1</h2>
+						<p>75 liters per 100km</p>
+						<p>{{ f1_cost }}</p>
+					</div>
+				</section>
+			</main>
+
+			<form>
+				<div>
+					<h4>Distance</h4>
+					<p>Enter the trip distance <br/>you want to go</p>
+					<select ng-change="calculate()" ng-model="current_distance" ng-options="o as o for o in distance_options"></select>
+				</div>
+				<div>
+					<h4>Fuel</h4>
+					<p>Enter the price <br>per liter and press enter</p>
+					<input type="number" step="any" ng-change="calculate()" ng-model="current_cost" value="{{current_cost}}" ng-model-options="{updateOn: 'blur change'}"> dollars
+				</div>
+			</form>	
+
+		</div>
+
+	</body>
+</html>
