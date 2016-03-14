@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#myCalculator { 
+	margin: 0 auto; 
+	padding: 0; 
+	font-size: 16px; 
+	font-family: 'Open Sans', 
+	sans-serif; 
+	font-weight: 300; 
+	line-height: 24px; 
+	max-width: 100%; 
+}
+
+#myCalculator #header {
+	margin: 0;
+	padding: 10px;
+	background-color: #000;
+	height: 50px;
+}
+
+#myCalculator #header h1 {
+	text-align: center;
+	color: #888;
+}
+
+#myCalculator main { 
+	background-color: #444; 
+}
+
+#myCalculator main section {
+	margin: 0 auto;
+	padding: 0;
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding-top: 0px;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 300px;
+	height: 530px;
+}
+
+#myCalculator main::after { 
+	content: ''; display: block; 
+	clear: both; 
+}
+
+#myCalculator main section.mazda { 
+	background-color: #AF0E28; 
+	background-image: url(images/mazda2.jpg); 
+}
+
+#myCalculator main section.toyota { 
+	background-color: #505559; 
+	background-image: url(images/toyotaHilux.jpg); 
+}
+
+#myCalculator main section.lambo { 
+	background-color: #D59D30; 
+	background-image: url(images/lamborghiniHuracan.jpg); 
+}
+
+#myCalculator main section.f1 { 
+	background-color: #33A199; 
+	background-image: url(images/mercedesF1.jpg); 
+}
+
+#myCalculator main section h2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 2em;
+	letter-spacing: 1px;
+	margin: 5px 0 5px 0;
+	line-height: 1.1em;
+}
+
+#myCalculator main p { 
+	margin: 0; 
+	font-size: 1.5em; 
+	font-weight: 300; 
+}
+
+#myCalculator main p + p { 
+	font-size: 1.5em; 
+	font-weight: 700; 
+}
+
+#myCalculator main p + p::before { 
+	content: '$'; 
+}
+
+#myCalculator main p + p::after { 
+	content: 'total for the trip'; color: rgba(255,255,255); 
+	padding-left: 4px; 
+}
+
+#myCalculator form {
+	background-color: #000;
+	margin: 0; 
+	padding: 10px 0px;
+}
+
+#myCalculator form br { 
+	display: none; 
+}
+
+#myCalculator form > div {
+	color: #fff;
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: 10px 0 5px 0;
+}
+
+#myCalculator form::after { 
+	content:''; display: block; clear: both; 
+}
+
+#myCalculator form h4 {
+	color: #aaa;
+	margin: 0 0  -5px 0; 
+	font-size: 1.5em; 
+	font-weight: 300;
+}
+
+#myCalculator form p { 
+	color: #888; 
+	margin: 0 0  6px 0; 
+	font-size: .9em; 
+}
+
+#myCalculator form input[type=number] {
+	width: 50px; 
+	text-align: left; 
+	font-size: 1em;
+}
+
+#myCalculator form select {
+	font-size: 1em;
+	-webkit-appearance: none;
+	-mox-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background: #fff url(images/icons_arrows.svg) no-repeat right 6px;
+	background-size: 30px 20px;
+	padding: 3px 30px 3px 5px;
+}
+
+#myCalculator form select::-ms-expand { 
+	display: none; 
+}
+
+@media screen and (max-width: 500px) {
+
+	#myCalculator { font-size: 15px; }
+	#myCalculator #header h1 { font-size: 20px;}
+	#myCalculator main section {background-size: 45px 71px; padding-top: 8px;}
+	#myCalculator main h4 {margin: 0; font-size: .75em; letter-spacing: 0;}
+	#myCalculator main p {font-size: 1.1em;}
+	#myCalculator main p + p::after {display: block; margin-top: -10px; color: #fff;}
+	#myCalculator form h4 {font-size: 1.1em; margin: 0;}
+	#myCalculator form p {font-size: .8em; line-height: 14px;}
+	#myCalculator form br {display: inline;}
+	#myCalculator form input[type=number] {width: 30px; font-size: .8em;}
+	#myCalculator form select {font-size: .8em;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
